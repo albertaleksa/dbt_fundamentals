@@ -11,7 +11,18 @@ sources:
 
     tables:
       - name: orders
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
+              
       - name: customers
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
         freshness: null
 
   - name: stripe
