@@ -16,7 +16,7 @@ sources:
             data_tests:
               - unique
               - not_null
-              
+
       - name: customers
         columns:
           - name: id
@@ -24,7 +24,4 @@ sources:
               - unique
               - not_null
         freshness: null
-
-  - name: stripe
-    tables:
-      - name: payments
+                  
