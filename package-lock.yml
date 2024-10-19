@@ -1,0 +1,6 @@
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 1.3.0
+  - package: gitlabhq/snowflake_spend
+    version: 1.3.0
+sha1_hash: bdfe7e262844fb6dfc6b1c59512e85d35646e660
