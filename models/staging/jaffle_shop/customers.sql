@@ -23,8 +23,8 @@ customers_orders as (
 final as (
     select
         customers.customer_id,
-        customers.first_name,
-        customers.last_name,
+        customers.givenname as first_name,
+        customers.surname as last_name,
         employees.employee_id is not null as is_employee,
         customers_orders.first_order_date,
         customers_orders.most_recent_order_date,
