@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: Fact Orders table.
+    columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
+
+  - name: fct_customer_orders
+    description: Fact Customer Orders table.
+    columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('int_orders')
+              field: order_id
+
+  - name: fct_customer_orders2
+    description: Fact Customer Orders table v2.
+    columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('int_orders2')
+              field: order_id

@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: int_orders
+    description: Orders joint with payments.
+    columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
+
+  - name: int_orders2
+    description: Orders joint with payments v2.
+    columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
+
+  - name: int_orders__pivoted
+    description: Pivoted amount of orders by payment_method.
+    columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__orders')
+              field: order_id
